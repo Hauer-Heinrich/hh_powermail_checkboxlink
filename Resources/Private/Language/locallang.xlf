@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2017-02-08T00:01:00Z" product-name="hh_powermail_checkboxlink">
+        <header/>
+        <body>
+
+            <trans-unit id="data_protection_text.label" xml:space="preserve">
+                <source>data protection text</source>
+            </trans-unit>
+
+            <trans-unit id="rte_checkboxlink_value.label" xml:space="preserve">
+                <source>data protection value</source>
+            </trans-unit>
+
+            <trans-unit id="rte_checkboxlink_value.description" xml:space="preserve">
+                <source>value of the Checkbox (e. g. "yes" or "true" or "accepted" - "accepted" is the default value if field is empty)</source>
+            </trans-unit>
+
+            <trans-unit id="rte_checkboxlink_value.default" xml:space="preserve">
+                <source>accepted</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

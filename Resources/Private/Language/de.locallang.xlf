@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2014-05-02T12:00:00Z" product-name="hh_powermail_checkboxlink">
+        <header/>
+        <body>
+
+            <trans-unit id="rte_checkboxlink_value.label">
+                <target state="translated">data protection</target>
+            </trans-unit>
+
+            <trans-unit id="rte_checkboxlink_value.description">
+                <target state="translated">(z. B. "yes" oder "true" oder "this is ok")</target>
+            </trans-unit>
+
+            <trans-unit id="rte_checkboxlink_value.default">
+                <target state="translated">akzeptiert</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

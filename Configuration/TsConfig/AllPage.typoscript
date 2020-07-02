@@ -1,0 +1,2 @@
+### Include all PageTS files
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:hh_powermail_checkboxlink/Configuration/TsConfig/Page" extensions="typoscript">

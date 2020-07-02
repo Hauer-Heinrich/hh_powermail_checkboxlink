@@ -1,0 +1,46 @@
+{
+    "name": "hauerheinrich/hh-powermail-checkboxlink",
+    "type": "typo3-cms-extension",
+    "description": "Additional field for EXT:powermail. Adds one checkbox with RTE as Label/Description. Usage for e. g. gdpr-checkbox with link.",
+    "authors": [
+        {
+            "name": "Christian Hackl",
+            "email": "web@hauer-heinrich.de",
+            "homepage": "http://www.hauer-heinrich.de",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/Hauer-Heinrich/hh_add_statuscode/issues",
+        "source": "https://github.com/Hauer-Heinrich/hh_add_statuscode",
+        "docs": "https://github.com/Hauer-Heinrich/hh_add_statuscode/blob/master/README.md"
+    },
+    "version": "0.1.0",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": [
+        "TYPO3 CMS",
+        "extension",
+        "hauer-heinrich"
+    ],
+    "replace": {
+        "hauer-heinrich/hh_powermail_checkboxlink": "self.version",
+        "typo3-ter/hh-powermail-checkboxlink": "self.version"
+    },
+    "require": {
+        "typo3/cms-core": ">= 10.0.0 <= 10.4.99",
+        "typo3/cms-backend": ">= 10.0.0 <= 10.4.99",
+        "typo3/cms-fluid": ">= 10.0.0 <= 10.4.99",
+        "typo3/cms-extbase": ">= 10.0.0 <= 10.4.99",
+        "in2code/powermail": ">= 8.0.0 <= 9.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HauerHeinrich\\HhPowermailCheckboxlink\\": "Classes"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "hh_powermail_checkboxlink"
+        }
+    }
+}

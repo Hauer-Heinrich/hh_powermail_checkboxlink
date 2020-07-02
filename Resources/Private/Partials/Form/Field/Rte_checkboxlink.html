@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:vh="http://typo3.org/ns/In2code/Powermail/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_input powermail_fieldwrap_{field.uid} {field.css} powermail_fieldwrap_checkboxlink">
+    <f:render partial="Form/FieldLabel" arguments="{_all}" />
+
+    <div class="{settings.styles.framework.fieldWrappingClasses}">
+        <f:form.checkbox
+            property="{field.marker}."
+            value="<f:if condition='{field.prefillValue}'><f:then>{field.prefillValue}</f:then><f:else>{f:translate(key: 'LLL:EXT:hh_powermail_checkboxlink/Resources/Private/Language/locallang.xlf:rte_checkboxlink_value.default')}</f:else></f:if>"
+            checked=""
+            id="powermail_field_{field.marker}"
+            additionalAttributes="{vh:Validation.ValidationDataAttribute(field:field)}"
+            class="powermail_checkbox powermail_checkbox_{field.uid}" />
+
+        <f:if condition="{field.mandatory} == true && {field.css} == 'nolabel'"><span class="mandatory">*</span></f:if>
+
+        <div class="description checkbox-description">
+            <f:format.html>{field.text}</f:format.html>
+        </div>
+    </div>
+</div>
+
+</html>
