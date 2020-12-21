@@ -1,4 +1,10 @@
 <?php
+$extensionKey = 'hh_powermail_checkboxlink';
+
+// Typo3 extension manager gearwheel icon (ext_conf_template.txt)
+$extensionConfiguration = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][$extensionKey];
+$textToRichText = $extensionConfiguration['textToRichText'];
+
 /**
  * extend powermail fields tx_powermail_domain_model_field
  */
@@ -33,10 +39,13 @@ $tempColumns = [
     ],
 ];
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
-    'tx_powermail_domain_model_field',
-    $tempColumns
-);
+if ($textToRichText === '1') {
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
+        'tx_powermail_domain_model_field',
+        $tempColumns
+    );
+    $tempColumns = [];
+}
 
 $GLOBALS['TCA']['tx_powermail_domain_model_field']['types']['rte_checkboxlink'] = [
     'showitem' => '
@@ -55,5 +64,6 @@ $GLOBALS['TCA']['tx_powermail_domain_model_field']['types']['rte_checkboxlink'] 
             hidden,
             starttime,
             endtime
-        '
+    ',
+    'columnsOverrides' => $tempColumns
 ];

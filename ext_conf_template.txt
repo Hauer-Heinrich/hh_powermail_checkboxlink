@@ -9,3 +9,6 @@ config {
 
 # cat=RTE; type=string; label=LLL:EXT:hh_powermail_checkboxlink/Resources/Private/Language/locallang_extconfig.xlf:rtePresetsPath
 rtePresets = EXT:hh_powermail_checkboxlink/Configuration/RTE/rte_checkboxlink.yaml
+
+# cat=RTE; type=boolean; label=Replace original "text"-field with a RTE-field
+textToRichText = 0
