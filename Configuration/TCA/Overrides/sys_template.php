@@ -1,8 +1,7 @@
 <?php
-defined('TYPO3_MODE') || die();
+defined('TYPO3') || die();
 
 call_user_func(function() {
-
     $extensionKey = 'hh_powermail_checkboxlink';
 
     // make TypoScript selectable
