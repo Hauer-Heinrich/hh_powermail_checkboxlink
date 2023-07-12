@@ -23,10 +23,10 @@ $EM_CONF['hh_powermail_checkboxlink'] = [
     'version' => '0.1.1',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.0.0-11.5.99',
-            'extbase' => '10.0.0-11.5.99',
-            'fluid' => '10.0.0-11.5.99',
-            'powermail'=> '8.0.0-10.4.99'
+            'typo3' => '11.5.0-12.4.99',
+            'extbase' => '11.5.0-12.4.99',
+            'fluid' => '11.5.0-12.4.99',
+            'powermail'=> '8.0.0-11.0.99'
         ],
         'conflicts' => [
         ],
