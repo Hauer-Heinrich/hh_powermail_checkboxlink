@@ -10,25 +10,8 @@ $textToRichText = $extensionConfiguration['textToRichText'];
 /**
  * extend powermail fields tx_powermail_domain_model_field
  */
+$rteColumn = [];
 $tempColumns = [
-    'text' => [
-        'exclude' => 1,
-        'label' => 'LLL:EXT:hh_powermail_checkboxlink/Resources/Private/Language/locallang.xlf:data_protection_text.label',
-        'config' => [
-            'type' => 'text',
-            'enableRichtext' => true,
-            'richtextConfiguration' => 'rte_checkboxlink',
-            'fieldControl' => [
-                'fullScreenRichtext' => [
-                    'disabled' => false,
-                ],
-            ],
-            'default' => '',
-            'cols' => 40,
-            'rows' => 15,
-            'eval' => 'trim',
-        ]
-    ],
     'prefill_value' => [
         'label' => 'LLL:EXT:hh_powermail_checkboxlink/Resources/Private/Language/locallang.xlf:rte_checkboxlink_value.label',
         'description' => 'LLL:EXT:hh_powermail_checkboxlink/Resources/Private/Language/locallang.xlf:rte_checkboxlink_value.description',
@@ -39,14 +22,35 @@ $tempColumns = [
             'eval' => 'trim',
         ]
     ],
+    'text' => [
+        'label' => 'LLL:EXT:hh_powermail_checkboxlink/Resources/Private/Language/locallang.xlf:data_protection_text.label',
+        'config' => [
+            'enableRichtext' => true,
+            'richtextConfiguration' => 'rte_checkboxlink',
+            'eval' => 'trim',
+        ]
+    ],
 ];
-
 if ($textToRichText === '1') {
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
-        'tx_powermail_domain_model_field',
-        $tempColumns
-    );
-    $tempColumns = [];
+    $rteColumn = [
+        'text' => [
+            'config' => [
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'rte_checkboxlink',
+                'eval' => 'trim',
+            ]
+        ]
+    ];
+
+    $GLOBALS['TCA']['tx_powermail_domain_model_field']['types']['text'] = [
+        'showitem' => $GLOBALS['TCA']['tx_powermail_domain_model_field']['types']['text']['showitem'],
+        'columnsOverrides' => [...$rteColumn]
+    ];
+
+    // \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
+    //     'tx_powermail_domain_model_field',
+    //     array_merge($tempColumns, $rteColumn)
+    // );
 }
 
 $GLOBALS['TCA']['tx_powermail_domain_model_field']['types']['rte_checkboxlink'] = [
@@ -67,5 +71,5 @@ $GLOBALS['TCA']['tx_powermail_domain_model_field']['types']['rte_checkboxlink'] 
             starttime,
             endtime
     ',
-    'columnsOverrides' => $tempColumns
+    'columnsOverrides' => [...$tempColumns]
 ];

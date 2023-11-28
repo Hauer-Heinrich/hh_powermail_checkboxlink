@@ -17,4 +17,8 @@ call_user_func(function() {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptConstants('@import "EXT:'.$extensionKey.'/Configuration/TypoScript/constants.typoscript"');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup('@import "EXT:'.$extensionKey.'/Configuration/TypoScript/setup.typoscript"');
     }
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+        'plugin.tx_powermail.settings.setup.textToRichText = '.$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['hh_powermail_checkboxlink']['textToRichText']
+    );
 });

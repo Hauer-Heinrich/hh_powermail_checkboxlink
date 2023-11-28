@@ -6,7 +6,10 @@
     <f:render partial="Form/FieldLabel" arguments="{_all}" />
 
     <div class="{settings.styles.framework.fieldWrappingClasses} {settings.styles.framework.offsetClasses}">
-        <f:format.nl2br>{field.text}</f:format.nl2br>
+        <f:if condition="{settings.textToRichText}">
+            <f:then><f:format.html>{field.text}</f:format.html></f:then>
+            <f:else><f:format.nl2br>{field.text}</f:format.nl2br></f:else>
+        </f:if>
     </div>
 </div>
 
