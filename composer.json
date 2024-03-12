@@ -15,7 +15,7 @@
         "source": "https://github.com/Hauer-Heinrich/hh_add_statuscode",
         "docs": "https://github.com/Hauer-Heinrich/hh_add_statuscode/blob/master/README.md"
     },
-    "version": "0.1.4",
+    "version": "0.1.5",
     "license": ["GPL-2.0-or-later"],
     "keywords": [
         "TYPO3 CMS",
@@ -31,7 +31,7 @@
         "typo3/cms-backend": ">= 11.5.0 <= 12.4.99",
         "typo3/cms-fluid": ">= 11.5.0 <= 12.4.99",
         "typo3/cms-extbase": ">= 11.5.0 <= 12.4.99",
-        "in2code/powermail": ">= 8.0.0 <= 12.1.99"
+        "in2code/powermail": ">= 8.0.0 <= 12.2.99"
     },
     "autoload": {
         "psr-4": {
