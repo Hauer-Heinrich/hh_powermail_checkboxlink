@@ -20,13 +20,14 @@ $EM_CONF['hh_powermail_checkboxlink'] = [
     'uploadfolder' => '0',
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '0.1.6',
+    'version' => '0.2.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.5.0-12.4.99',
-            'extbase' => '11.5.0-12.4.99',
-            'fluid' => '11.5.0-12.4.99',
-            'powermail'=> '8.0.0-12.3.99'
+            'php' => '>=8.2.0',
+            'typo3' => '12.4.0-13.4.99',
+            'extbase' => '12.4.0-13.4.99',
+            'fluid' => '12.4.0-13.4.99',
+            'powermail'=> '8.0.0-13.0.99'
         ],
         'conflicts' => [
         ],
