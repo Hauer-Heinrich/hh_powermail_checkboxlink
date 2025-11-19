@@ -1,5 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
     xmlns:vh="http://typo3.org/ns/In2code/Powermail/ViewHelpers"
+    xmlns:hhpcb="http://typo3.org/ns/HauerHeinrich/HhPowermailCheckboxlink/ViewHelper"
     data-namespace-typo3-fluid="true">
 
 <div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_input powermail_fieldwrap_{field.uid} {field.css} powermail_fieldwrap_checkboxlink">
@@ -12,12 +13,11 @@
             checked=""
             id="powermail_field_{field.marker}"
             additionalAttributes="{vh:Validation.ValidationDataAttribute(field:field)}"
-            class="powermail_checkbox powermail_checkbox_{field.uid}" />
+            class="powermail_checkbox powermail_checkbox_{field.uid}"
+            aria="{labelledby: 'powermail_field_description_{field.marker}'}" />
 
-        <f:if condition="{field.mandatory} == true && {field.css} == 'nolabel'"><span class="mandatory">*</span></f:if>
-
-        <div class="description checkbox-description">
-            <f:format.html>{field.text}</f:format.html>
+        <div id="powermail_field_description_{field.marker}" class="description checkbox-description">
+            <f:format.html><hhpcb:injectMandatoryStar content="{field.text}" mandatory="{field.mandatory}" fieldCss="{field.css}" /></f:format.html>
         </div>
     </div>
 </div>

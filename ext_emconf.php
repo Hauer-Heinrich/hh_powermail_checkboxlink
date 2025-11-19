@@ -20,7 +20,7 @@ $EM_CONF['hh_powermail_checkboxlink'] = [
     'uploadfolder' => '0',
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '0.2.1',
+    'version' => '0.2.2',
     'constraints' => [
         'depends' => [
             'php' => '>=8.2.0',
