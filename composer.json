@@ -11,9 +11,9 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/Hauer-Heinrich/hh_add_statuscode/issues",
-        "source": "https://github.com/Hauer-Heinrich/hh_add_statuscode",
-        "docs": "https://github.com/Hauer-Heinrich/hh_add_statuscode/blob/master/README.md"
+        "issues": "https://github.com/Hauer-Heinrich/hh_powermail_checkboxlink/issues",
+        "source": "https://github.com/Hauer-Heinrich/hh_powermail_checkboxlink",
+        "docs": "https://github.com/Hauer-Heinrich/hh_powermail_checkboxlink/blob/master/README.md"
     },
     "version": "0.2.1",
     "license": ["GPL-2.0-or-later"],
